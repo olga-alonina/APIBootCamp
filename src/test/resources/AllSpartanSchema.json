@@ -9,13 +9,13 @@
     [
       {
         "id": 4,
-        "name": "FastTrack01",
+        "name": "BootCamp01",
         "gender": "Male",
         "phone": 1243569874
       },
       {
         "id": 5,
-        "name": "FastTrack03",
+        "name": "BootCamp03",
         "gender": "Female",
         "phone": 3677539542
       }
@@ -34,7 +34,7 @@
         "examples": [
           {
             "id": 4,
-            "name": "FastTrack01",
+            "name": "BootCamp01",
             "gender": "Male",
             "phone": 1243569874
           }
@@ -63,7 +63,7 @@
             "description": "An explanation about the purpose of this instance.",
             "default": "",
             "examples": [
-              "FastTrack01"
+              "BootCamp01"
             ]
           },
           "gender": {

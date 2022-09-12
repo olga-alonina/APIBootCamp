@@ -23,7 +23,7 @@ public class P01_SpartanFlowWithMapTest extends SpartanTestbase {
 
     - POST     /spartans
             Create a spartan Map
-                name = "FastTrack POST "
+                name = "BootCamp POST "
                 gender="Male"
                 phone=1231231231l
 
@@ -34,7 +34,7 @@ public class P01_SpartanFlowWithMapTest extends SpartanTestbase {
     - PUT  Spartan with spartanID    /spartans/{id}
 
              Create a spartan Map
-                name = "FastTrack PUT "
+                name = "BootCamp PUT "
                 gender="Female"
                 phone=3213213213l
 
@@ -43,14 +43,14 @@ public class P01_SpartanFlowWithMapTest extends SpartanTestbase {
     - PATCH  Spartan with spartanID    /spartans/{id}
 
              Create a spartan Map
-                name = "FastTrack PATCH "
+                name = "BootCamp PATCH "
              - verify status code 204
 
     - GET  Spartan with spartanID     /spartans/{id}
 
 
              - verify status code 200
-             - verfiy name is FastTrack PUT
+             - verfiy name is BootCamp PUT
 
     - DELETE  Spartan with spartanID   /spartans/{id}
 
@@ -61,7 +61,7 @@ public class P01_SpartanFlowWithMapTest extends SpartanTestbase {
 
 
              - verify status code 404
-             - verfiy name is FastTrack PUT
+             - verfiy name is BootCamp PUT
 
 
      */
@@ -73,7 +73,7 @@ public class P01_SpartanFlowWithMapTest extends SpartanTestbase {
 
         Map<String,Object> spartanMap=new HashMap<>();
 
-        spartanMap.put("name", "FastTrack POST");
+        spartanMap.put("name", "BootCamp POST");
         spartanMap.put("gender", "Male");
         spartanMap.put("phone", 1231231231l);
 
@@ -100,7 +100,7 @@ public class P01_SpartanFlowWithMapTest extends SpartanTestbase {
 
         Map<String,Object> spartanMap=new HashMap<>();
 
-        spartanMap.put("name", "FastTrack PUT");
+        spartanMap.put("name", "BootCamp PUT");
         spartanMap.put("gender", "Female");
         spartanMap.put("phone", 3213213213l);
 
@@ -119,7 +119,7 @@ public class P01_SpartanFlowWithMapTest extends SpartanTestbase {
     public void patchSpartan() {
         Map<String,Object> spartanMap=new HashMap<>();
 
-        spartanMap.put("name", "FastTrack PATCH");
+        spartanMap.put("name", "BootCamp PATCH");
 
 
         given().log().uri()
@@ -142,7 +142,7 @@ public class P01_SpartanFlowWithMapTest extends SpartanTestbase {
                 .get("/spartans/{id}").prettyPeek().
         then()
                 .statusCode(200)
-                .body("name", is("FastTrack PATCH"));
+                .body("name", is("BootCamp PATCH"));
 
 
     }

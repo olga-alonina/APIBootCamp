@@ -25,11 +25,11 @@ public class P02_SpartanFlowWithPOJOTest extends SpartanTestbase {
         Spartan spartan=new Spartan();
 
         spartan.setGender("Female");
-        spartan.setName("FastTrack POJO");
+        spartan.setName("BootCamp POJO");
         spartan.setPhone(1231231231l);
 
         //second way
-        Spartan spartanNew=new Spartan("FastTrack POJO","Female",3213213211l);
+        Spartan spartanNew=new Spartan("BootCamp POJO","Female",3213213211l);
 
 
          spartanID = given().log().uri()
@@ -55,7 +55,7 @@ public class P02_SpartanFlowWithPOJOTest extends SpartanTestbase {
                 .get("/spartans/{id}").prettyPeek().
                 then()
                 .statusCode(200)
-                .body("name", is("FastTrack POJO"))
+                .body("name", is("BootCamp POJO"))
                 .extract().jsonPath();
 
 

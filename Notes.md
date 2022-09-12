@@ -1,13 +1,13 @@
 
 
-#Fast Track SDET 2
+# API BootCamp
 
-##Day01
 
-Here is the [link](https://www.notion.so/mehmetct/API-Bootcamp-acfa82435ff54563917df7d12480debc
+
+Here is the for BootCamp Notes from Notion [link](https://www.notion.so/mehmetct/API-Bootcamp-acfa82435ff54563917df7d12480debc
 )
 
-##Day02
+
 Rest Assured  [link](https://rest-assured.io)
 
 JUnit5  [link](https://junit.org/junit5/docs/current/user-guide/)
@@ -18,10 +18,15 @@ JUnit5  [link](https://junit.org/junit5/docs/current/user-guide/)
     - Authorization vs Authentication
     - JsonSchemaValidations
     - MockAPI
+    - Postman 
+      - Variables
+      - Running Collections
+      - DDT
+      - Automation 
 
 
 
-##Creating Maven Project
+## Creating Maven Project
 ```xml
 <dependencies>
         <!--JUnit5 to set up our framework it is same thing but different features with TestNG    -->
@@ -109,7 +114,7 @@ then()      -----> ValidatableResponse
     .log
 
 ```
-###Questions
+### Questions
 
 1. What do we have in the request and response?
     - Request
@@ -284,7 +289,7 @@ I verify each key datatypes must exactly matches JSON vs SCHEMA
 
 
 
-###Links
+### Links
 
 - [Find JsonPath](https://jsonpathfinder.com/)
 
