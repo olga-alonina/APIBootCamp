@@ -37,10 +37,10 @@ public class P04_HamCrestMatchersTest extends HrTestBase {
         then()
                 .statusCode(200)
                 .header("Date", notNullValue())
-                .body("items[0].region_name",is("PUT Region Officehours"))
-                .body("items[0].region_id",is(1))
-                .body("items.region_name", containsInRelativeOrder("Europe", "Americas", "Asia", "Middle East and Africa"))
-                .body("items",hasSize(4))
+                .body("items.region_name",hasItem("Europe"))
+                .body("items.region_id",hasItem(1))
+                .body("items.region_name", containsInRelativeOrder("Europe", "Americas", "Asia"))
+                .body("items",hasSize(25))
         ;
 
 

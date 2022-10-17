@@ -16,9 +16,9 @@ public class P04_HamCrestSpartanTest extends SpartanTestbase {
      * - Verify followings
      *       - Status Code is 200
      *       - ContentType is application/json
-     *       - Total Element 2
-     *       - jsonArray size hasSize 2
-     *       - All Names hasItem "Meade1"
+     *       - Total Element 1
+     *       - jsonArray size hasSize 1
+     *       - All Names hasItem "Jeanelle"
      *       - Every gender is Female
      */
 
@@ -35,8 +35,8 @@ public class P04_HamCrestSpartanTest extends SpartanTestbase {
                 .statusCode(200)
                 .contentType(ContentType.JSON)
                 .body("totalElement", is(1))
-                .body("content", hasSize(2))
-                .body("content.name",hasItem("Meade1"))
+                .body("content", hasSize(1))
+                .body("content.name",hasItem("Jeanelle"))
                 .body("content.gender",everyItem(is("Female")))
         ;
 

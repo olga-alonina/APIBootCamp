@@ -4,12 +4,14 @@ import com.cydeo.utility.HrTestBase;
 import io.restassured.http.ContentType;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
+import org.joda.time.DateTimeUtils;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
 
 import static io.restassured.RestAssured.*;
+import static org.hamcrest.Matchers.lessThan;
 
 public class P03_JsonPathTest extends HrTestBase {
 
@@ -30,11 +32,13 @@ public class P03_JsonPathTest extends HrTestBase {
 
   */
 
-        Response response = given()
+        Response response =  given()
                 .accept(ContentType.JSON)
                 .log().uri().
                 when()
                 .get("/locations").prettyPeek();
+             //   .then().time(lessThan(2000L), TimeUnit.MILLISECONDS)
+          //      .extract().response();
 
 
         JsonPath jp = response.jsonPath();

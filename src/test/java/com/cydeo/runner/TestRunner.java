@@ -12,7 +12,7 @@ import org.junit.platform.suite.api.*;
 //@IncludeTags({ "newsAPI", "contains" })  // look for anything that tagged with smoke 1
 //@IncludeTags("db")  // this is class level tag
 
-//@ExcludeTags("spartan")  // it will exclude this tag
+@ExcludeTags("spartan")  // it will exclude this tag
 
 // MAKE SURE THE TEST CLASSES YOU SELECT HAVE FOLLOWED NAMING CONVENTION
 // ClassName should be SomethingTest

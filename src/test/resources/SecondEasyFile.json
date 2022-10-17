@@ -1,0 +1,9 @@
+{
+  "employee": 12,
+    "id": "1212",
+    "fullName": "John Miles",
+    "age": 35,
+    "contact": 12,
+      "email": "john@xyz.com",
+      "phone": "9999999999"
+    }
